@@ -8,7 +8,7 @@ body{background:var(--bg);color:var(--tx);font-family:Tahoma,"Segoe UI","Noto Na
 nav{position:sticky;top:0;z-index:20;display:flex;gap:8px;overflow-x:auto;padding:10px 14px;background:#0b1030ee;backdrop-filter:blur(8px);scrollbar-width:none}
 nav a{flex:none;color:#111;background:var(--y);text-decoration:none;border-radius:20px;padding:2px 14px;font-size:15px;font-weight:900;transition:.2s}nav a:hover,nav a.on{background:var(--p);transform:translateY(-2px) rotate(-2deg)}
 .hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:40px 18px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 10%,#7c5cffcc,transparent 50%),radial-gradient(circle at 10% 90%,#ff7ab688,transparent 45%)}
-.hero h1{font-size:clamp(34px,7vw,74px);line-height:1.25;color:#fff;text-shadow:0 5px 0 #000a}
+.hero h1{font-size:clamp(34px,7vw,74px);line-height:1.25;color:#fff}
 .hero h1 b,h2 b{color:#111;background:var(--y);padding:0 14px;border-radius:14px;display:inline-block;box-shadow:0 6px 0 #9a6f00;text-shadow:none;transform:rotate(-2deg)}
 .hero p{font-size:clamp(17px,2.6vw,26px);color:var(--y);margin:16px 0 26px}
 .go{display:inline-block;background:var(--r);color:#fff;border:4px solid #111;border-radius:18px;padding:6px 28px;font-size:24px;font-weight:900;text-decoration:none;box-shadow:0 7px 0 #000;animation:pu 1.6s infinite}
@@ -19,7 +19,7 @@ nav a{flex:none;color:#111;background:var(--y);text-decoration:none;border-radiu
 section.s{max-width:1100px;margin:0 auto;padding:70px 18px 30px;position:relative}
 .hd{display:flex;align-items:center;gap:18px;margin-bottom:10px}
 .no{flex:none;width:76px;height:76px;border-radius:22px;background:linear-gradient(145deg,#ffe45e,#f5b800);color:#111;font-size:44px;font-weight:900;display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 7px 0 #9a6f00,0 16px 24px #000a}
-h2{font-size:clamp(28px,5vw,46px);line-height:1.25;text-shadow:0 4px 0 #0008}
+h2{font-size:clamp(28px,5vw,46px);line-height:1.25}
 .hook{color:var(--mut);font-size:clamp(16px,2.4vw,22px);margin:4px 0 22px}
 .stamp{margin-inline-start:auto;background:var(--r);color:#fff;border:4px solid #111;border-radius:14px;padding:2px 18px;font-size:20px;font-weight:900;transform:rotate(6deg);box-shadow:0 6px 0 #000;animation:pu 1.8s infinite;white-space:nowrap}
 .rv{opacity:0;transform:translateY(40px) scale(.9);transition:opacity .6s,transform .7s cubic-bezier(.2,.9,.3,1.25)}.rv.in{opacity:1;transform:none}
@@ -42,9 +42,15 @@ h2{font-size:clamp(28px,5vw,46px);line-height:1.25;text-shadow:0 4px 0 #0008}
 .warn{background:var(--r);color:#fff}.warn b{color:#111}
 .wf{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
 .sc{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0}
-.fefo{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0}
-.fefo div{background:#fff;color:#111;border:4px solid #111;border-radius:14px;padding:8px 16px;text-align:center;box-shadow:0 6px 0 #000;font-size:15px;transition:.6s;transform:translateX(var(--x,0))}
-.fefo div i{font-style:normal;font-size:32px;display:block}
+.fefo{display:flex;gap:10px;justify-content:center;margin:26px auto 16px;max-width:760px;padding:34px 14px 14px;background:linear-gradient(#d9b57a,#b08a52);border:5px solid #111;border-radius:16px;box-shadow:0 10px 0 #000,0 24px 30px #0008;position:relative}
+.fefo:before{content:"🗄️ الدرج";position:absolute;top:4px;right:16px;font-size:16px;color:#111}
+.fefo:after{content:"";position:absolute;top:8px;left:50%;width:80px;height:12px;margin-left:-40px;background:#6b4a22;border:3px solid #111;border-radius:8px}
+.pk{position:relative;flex:1;background:#fff;color:#111;border:4px solid #111;border-radius:10px;padding:6px 4px 8px;text-align:center;font-size:14px;line-height:1.35;transition:.6s}
+.pk:before{content:"";display:block;height:14px;background:var(--k);border-bottom:3px solid #111;margin:-6px -4px 6px;border-radius:6px 6px 0 0}
+.pk i{font-style:normal;font-size:28px;display:block}
+.pk em{font-style:normal;direction:ltr;unicode-bidi:isolate;display:block;font-size:13px;background:#ffd83d;border-radius:6px;margin-top:4px}
+.pk u{text-decoration:none;position:absolute;top:-16px;right:-8px;width:30px;height:30px;border-radius:50%;background:#111;color:#ffd83d;display:grid;place-items:center;font-size:17px;border:2px solid #ffd83d}
+.pk.fst{animation:pu 1.4s infinite;background:#d9ffe9}
 .lab{background:#fff;color:#111;border:4px dashed #111;border-radius:14px;padding:12px 18px;max-width:420px;margin:12px auto;font-size:17px}.lab p{border-bottom:2px dotted #888;padding:3px 0}
 .fr{max-width:320px;margin:16px auto;border:5px solid #111;border-radius:22px;background:#d9f1ff;color:#111;padding:12px;box-shadow:0 8px 0 #000}
 .fr div{padding:6px;margin:6px 0;border-radius:10px;font-size:15px;text-align:center;border:2px solid #111;background:#fff}.fr .dr{background:#ffb3b3}
@@ -59,9 +65,9 @@ footer{text-align:center;padding:50px 18px 70px;color:var(--mut)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style></head><body><div id="bar"></div>
 <nav id="nv"></nav>
-<header class="hero" id="top"><div class="cross" id="fx"></div><div style="position:relative"><h1>دليل <b>سلامة الدواء</b><br>للتمريض</h1><p>خمس قواعد… قد تنقذ حياة مريض 💛</p><a class="go" href="#s1">ابدأ الرحلة ⬇</a></div></header>
+<header class="hero" id="top"><div class="cross" id="fx"></div><div style="position:relative"><h1>دليل <b>سلامة الدواء</b><br>للتمريض</h1><p>خمس قواعد… قد تنقذ حياة مريض 💛</p><a class="go" href="#s1" aria-label="ابدأ">⬇</a></div></header>
 <main id="m"></main>
-<footer>أحسنت! 🎉 كل دواء تعطيه بأمان هو حياة تحميها.<br><span style="font-size:14px">يعمل بدون إنترنت</span></footer>
+<footer> كل دواء تعطيه بأمان هو حياة تحميها</footer>
 <script>
 var D=[
 {id:"s1",n:1,ic:"✋",t:"الحقوق الخمسة <b>لسلامة الدواء</b>",h:"قبل إعطاء أي دواء… قاعدة عامة موحّدة",st:"٥ حقوق",b:[
@@ -77,9 +83,9 @@ var D=[
 {l:"إيه اللي بيزوّد احتمال الخطأ؟ (٥ أسباب)"},
 {g:[["✍️","الخط اليدوي غير المقروء","","","#ffd83d"],["🧩","نقص المعرفة الكاملة بأسماء الأدوية","","","#ff7ab6"],["🆕","توفر منتجات جديدة في السوق","","","#aee4ff"],["📦","تشابه التغليف أو الملصقات","","","#2fd48a"],["⚖️","تشابه التركيزات وأشكال الجرعات وتكرار الإعطاء","","","#ffd83d"]]},
 {l:"📞 الأوامر الدوائية: سمعتها صح؟"},
-{g:[["✍️","وضّح شكل الجرعة وتركيز الدواء والتعليمات كاملة على الوصفة"],["🚨","الأوامر الهاتفية أو الشفوية للضرورة القصوى فقط، ويُفضّل ذكر الغرض من الدواء"],["🗣️","انطق اسم الدواء بوضوح وخد الوقت الكافي"],["🧠","حافظ على وعيك بأسماء الأدوية المتشابهة في النطق أو الشكل"]]},
+{g:[["✍️","وضّح شكل الجرعة وتركيز الدواء والتعليمات كاملة على الوصفة"],["🚨","لا يوجد أوامر هاتفية، ويوجد أوامر شفوية للضرورة القصوى فقط، ويُفضّل ذكر الغرض من الدواء"],["🗣️","انطق اسم الدواء بوضوح وخد الوقت الكافي"],["🧠","حافظ على وعيك بأسماء الأدوية المتشابهة في النطق أو الشكل"]]},
 {l:"قبل الإعطاء راجع مرتين 👀👀"},
-{h:'<div class="flow"><div class="c" style="--c:#2fd48a"><i>👩‍⚕️</i>📋✅</div><div class="ar">＝</div><div class="c" style="--c:#ff7ab6"><i>🧑‍⚕️</i>📋✅</div></div><div class="c">لا يُعطى أي دواء للمريض دون <b>مراجعة مزدوجة من موظف رعاية صحية آخر</b></div>'},
+{h:'<div class="flow"><div class="c" style="--c:#2fd48a"><i>👩‍⚕️</i>📋✅</div><div class="ar">＝</div><div class="c" style="--c:#ff7ab6"><i>🧑‍⚕️</i>📋✅</div></div><div class="c">لا يُعطى أي دواء للمريض دون مراجعة <b style="font-size:1.3em">مزدوجة</b> <b style="font-size:1.3em;background:#ff7ab6">منفصلة</b> من موظف رعاية صحية آخر</div>'},
 {g:[["🏷️","ملصق <span class='ltr mk'>LASA</span> على كل جرعة مفردة أو علبة مُدرجة بقائمة LASA"],["🎓","كل الموظفين المعنيين <b>على علم بسياسة LASA ومدربين عليها</b>"]]}]},
 {id:"s3",n:3,ic:"🚨",t:"الأدوية <b>عالية الخطورة</b>",h:"الخطأ فيها مش بيعدّي… ممكن يكون الأخير",st:"High alert",b:[
 {h:'<div class="stk" style="background:#f00">عالية الخطورة - High alert</div><div class="c" style="--c:#ffd83d;text-align:center;font-size:22px">أدوية خطؤها <b style="background:#ff4d3d;color:#fff">أخطر من غيرها</b> في التسبب بإصابة خطيرة أو وفاة للمريض إذا استُخدمت بشكل خاطئ</div>'},
@@ -96,7 +102,7 @@ var D=[
 {id:"s4",n:4,ic:"🚑",t:"أدوية <b>الطوارئ</b>",h:"في الطوارئ الثانية بتفرق… الدوا لازم يكون جاهز وآمن",st:"كود أزرق",b:[
 {g:[["✅","أدوية الطوارئ <b>متوفرة</b> وأماكنها معروفة","","","#2fd48a"],["🔒","أدوية الطوارئ <b>آمنة</b> من الفقد أو السرقة","","","#ffd83d"],["📖","دواء يُستخدم <b>فورًا</b> في الحالات المهددة للحياة أو الظروف الحرجة","","","#aee4ff"],["🛒","عربة الطوارئ (Crash Cart) + 🎒 شنطة الطوارئ","","","#ff7ab6"]],html:1},
 {l:"عربات الطوارئ فين؟"},
-{g:[["⬇️","الطابق السفلي: عربة BST/ECT"],["🏥","الطابق الأرضي: عربة الطوارئ ER"],["🫀","الطابق الأول والثاني: عربة العناية المركزة ICU"]],html:1},
+{g:[["⬇️","الطابق السفلي: عربة BST/ECT"],["🏥","الطابق الأرضي: عربة الطوارئ ER، وفي العيادات بجوار الصيدلية"],["🫀","الطابق الأول والثاني: عربة العناية المركزة ICU"]],html:1},
 {h:'<div class="c" style="--c:#0615e5;color:#fff"><i>🚫</i>العربات <span class="mk">لا تُفتح</span> إلا في حالات الكود الأزرق فقط أو أثناء التفتيش. المخزون موحّد في كل المستشفى لتتعرف عليه بسهولة.</div>'},
 {l:"🔐 التخزين والتأمين"},
 {g:[["🔐","العربة والشنطة <b>مقفولة بقفل له رقم تسلسلي</b>"],["📝","يُسجَّل رقم القفل في <b>نموذج فتح عربة الطوارئ</b>"],["🗄️","مخزون الدور الموحّد: <b>مكان مؤمّن ومقفول</b> ومعه الشخص المصرّح له فقط"],["👥","العربات والشنط <b>متاحة بسهولة</b> لكل العاملين المصرّح لهم"],["⛔","ممنوع أي وصول غير مصرّح به"]]},
@@ -117,7 +123,7 @@ var D=[
 {l:"🧴 متعدد الجرعات: العبوة اتفتحت؟ سجّل فورًا"},
 {h:'<div class="g"><div class="c"><i>🕒</i>تاريخ ووقت الفتح</div><div class="c"><i>⛔</i>تاريخ الانتهاء بعد الفتح</div></div><div class="lab"><p>إسم الدواء:</p><p>تركيز الدواء:</p><p>رقم التشغيلة:</p><p>تاريخ فتح الدواء:</p><p>استقرار الدواء:</p><p>إمضاء التمريض:</p></div><div class="c" style="--c:#ffb3b3;text-align:center"><i>💊➡️🏥</i>الباقي للصيدلية: يُتخلَّص من الكمية المتبقية من الأدوية متعددة الجرعات <b>عبر الصيدلية</b> — متتصرفش فيه</div>'},
 {l:"نظام FEFO: الأقرب انتهاءً… الأول خروجًا"},
-{h:'<div class="c" style="text-align:center">تخزين وصرف الأدوية بحيث يُصرف ذو تاريخ الانتهاء <b>الأقرب أولًا</b> (<span class="ltr">First Expire, First Out</span>)</div><div class="fefo" id="fe"></div><div style="text-align:center"><button class="go" id="fb" style="font:inherit;cursor:pointer;font-size:18px">🔀 اخلط ثم رتّب</button></div><div class="g"><div class="c"><i>🗄️</i>تُرتَّب الأدوية في الأدراج</div><div class="c"><i>📤</i>وتُصرف حسب نظام FEFO</div></div>'}]}
+{h:'<div class="c" style="text-align:center">تخزين وصرف الأدوية بحيث يُصرف ذو تاريخ الانتهاء <b>الأقرب أولًا</b> (<span class="ltr">First Expire, First Out</span>)</div><div class="fefo" id="fe"></div><div style="text-align:center"><button class="go" id="fb" style="font:inherit;cursor:pointer;font-size:18px">🔀 اخلط ثم رتّب</button></div><p class="hook" style="text-align:center">الأقرب انتهاءً في المقدمة (عند يدك) ← والأبعد انتهاءً في الخلف</p><div class="g"><div class="c"><i>🗄️</i>تُرتَّب الأدوية في الأدراج</div><div class="c"><i>📤</i>وتُصرف حسب نظام FEFO</div></div>'}]}
 ];
 var Q=[["المريض الصحيح يُتأكد منه بكم مؤشر على الأقل؟",["مؤشر واحد","مؤشرين","ثلاثة"],1],["كلوريد البوتاسيوم المركّز (2 mEq/mL أو أكثر) يُعطى…",["مركّزًا مباشرة","بعد التخفيف أولًا","كما هو في الباب"],1],["أقصى مدة لإبلاغ الصيدلية وإعادة تعبئة عربة الطوارئ؟",["ساعتان","يوم","أسبوع"],0],["أين يُحفظ الدواء في الثلاجة؟",["على الباب","على الأرفف بعيدًا عن الظهر","ملاصقًا للظهر"],1]];
 function esc(x){return x}
@@ -126,16 +132,13 @@ function card(a,m,cls){var s='<div class="c rv" style="--c:'+(a[4]||"#fff3d6")+'
  else s+=a[1];return s+'</div>'}
 var h='',nv='';
 D.forEach(function(d){nv+='<a href="#'+d.id+'">'+d.ic+' '+d.n+'</a>';
- h+='<section class="s" id="'+d.id+'"><div class="hd rv"><div class="no">'+d.n+'</div><div><h2>'+d.t+'</h2></div><div class="stamp">'+d.st+'</div></div><p class="hook rv">'+d.h+'</p>';
+ h+='<section class="s" id="'+d.id+'"><div class="hd rv"><div class="no">'+d.n+'</div><div><h2>'+d.t+'</h2></div><div class="stamp"'+(d.st=='كود أزرق'?' style="background:#0615e5"':'')+'>'+d.st+'</div></div><p class="hook rv">'+d.h+'</p>';
  d.b.forEach(function(b){
   if(b.l)h+='<div class="lb rv">'+b.l+'</div>';
   else if(b.h)h+='<div class="rv">'+b.h+'</div>';
   else if(b.g){var rt=b.k=='rights';h+='<div class="g" style="'+(b.cls=='mini'?'grid-template-columns:repeat(auto-fit,minmax(170px,1fr))':'')+(rt?'grid-template-columns:repeat(auto-fit,minmax(190px,1fr))':'')+'">';b.g.forEach(function(a,i){var x=card(a,rt,b.cls);if(rt)x=x.replace('class="c rv"','class="c rv" data-t="'+(i+1)+'"');h+=x});h+='</div>'}
  });h+='</section>'});
-h+='<section class="s" id="qz"><div class="hd rv"><div class="no">🎯</div><h2>اختبر <b>نفسك</b></h2></div>';
-Q.forEach(function(q,i){h+='<div class="q rv"><h3>'+(i+1)+') '+q[0]+'</h3>';q[1].forEach(function(o,j){h+='<button data-q="'+i+'" data-j="'+j+'">'+o+'</button>'});h+='</div>'});
-h+='</section>';
-document.getElementById('m').innerHTML=h;document.getElementById('nv').innerHTML=nv+'<a href="#qz">🎯</a>';
+document.getElementById('m').innerHTML=h;document.getElementById('nv').innerHTML=nv;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var el=e.target,sib=el.parentNode.querySelectorAll('.rv:not(.in)'),k=[].indexOf.call(sib,el);el.style.transitionDelay=Math.min(k,6)*.09+'s';el.classList.add('in');el.querySelectorAll('[data-n]').forEach(cnt);io.unobserve(el)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
 function cnt(s){var t=+s.dataset.n,v=0,st=setInterval(function(){v+=Math.max(1,t/20);if(v>=t){v=t;clearInterval(st)}s.textContent=Math.round(v)},50)}
@@ -146,8 +149,8 @@ addEventListener('scroll',function(){var s=document.documentElement,p=scrollY/(s
 var fx=document.getElementById('fx');['💊','💉','🩺','🧪','🏥','⚕️','💊','🧴'].forEach(function(e,i){var s=document.createElement('span');s.className='pill';s.textContent=e;s.style.cssText='top:'+(8+i*11)%90+'%;right:'+(6+i*37)%92+'%;animation-delay:-'+i+'s;font-size:'+(30+i%3*14)+'px';fx.appendChild(s)});
 document.addEventListener('mousemove',function(e){var c=e.target.closest&&e.target.closest('.c');if(c&&innerWidth>700){var r=c.getBoundingClientRect();c.style.transform='perspective(700px) rotateY('+((e.clientX-r.left)/r.width-.5)*10+'deg) rotateX('+(-((e.clientY-r.top)/r.height-.5))*8+'deg) translateY(-4px)'}});
 document.addEventListener('mouseout',function(e){var c=e.target.closest&&e.target.closest('.c');if(c)c.style.transform=''});
-var fe=document.getElementById('fe'),dt=['3 أيام','أسبوعان','شهران','6 أشهر'],ord=[0,1,2,3];
-function rf(o){fe.innerHTML='';o.forEach(function(k,i){fe.innerHTML+='<div style="--x:0"><i>💊</i>EXP<br>'+dt[k]+(o===ord?'<br>⬅ يُصرف '+(i?'بعده':'أولًا'):'')+'</div>'})}
+var fe=document.getElementById('fe'),dt=['08/2027','03/2028','12/2026','02/2028'],kc=['#ff7ab6','#aee4ff','#2fd48a','#ffb347'],ord=[0,1,2,3];
+function rf(o){fe.innerHTML='';o.forEach(function(k,i){fe.innerHTML+='<div class="pk'+(o===ord&&!i?' fst':'')+'" style="--k:'+kc[k]+'">'+(o===ord?'<u>'+(i+1)+'</u>':'')+'<i>💊</i>علبة<em>EXP '+dt[k]+'</em>'+(o===ord&&!i?'<b style="background:#2fd48a;border-radius:6px;padding:0 6px">يُصرف أولًا</b>':'')+'</div>'})}
 rf([2,0,3,1]);var sf=1;document.getElementById('fb').onclick=function(){sf=!sf;rf(sf?[2,0,3,1]:ord);this.textContent=sf?'🔀 اخلط من جديد':'▶ رتّبها FEFO';if(!sf)confetti()};
 document.getElementById("fb").textContent="▶ رتّبها FEFO";sf=1;
 </script></body></html>
